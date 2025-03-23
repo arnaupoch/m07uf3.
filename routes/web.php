@@ -29,7 +29,7 @@ Route::middleware('year')->group(function () {
         Route::get('booksByYear/{year?}', [bookController::class, "listByYear"])->name('listbooksByYear');
         Route::get('booksByGenre/{genre?}', [bookController::class, "listByGenre"])->name('listbooksByGenre');
         Route::get('sortbooks', [bookController::class, "sortByYear"])->name('sortByYear');
-        Route::get('countbooks', [bookController::class, "countbooks"])->name('listCount');
+        Route::get('countbooks', [bookController::class, "countbooks"])->name('countbooks');
         Route::get('allbooks', [bookController::class, "listbooks"])->name('listbooks');
         // autor y autores
         Route::get('countautores', [AutorController::class, "countautores"])->name('countautores');

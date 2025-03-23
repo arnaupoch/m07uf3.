@@ -14,11 +14,14 @@ class AutorController extends Controller
         return view('autores.list', compact('autores', 'title'));
 
     }
-    public function countActors()
+    public function countautores()
     {
-        $count = DB::table('autores')->count();
-        $title = "Cantidad de autores";
-        return view('autores.count', compact('count', 'title'));
+
+        $title = "Number of autores";
+        $autores = DB::table('autores')->count();
+
+
+        return view('autores.count', ["autores" => $autores, "title" => $title]);
     }
     public function deliteautores()
     {
@@ -81,32 +84,22 @@ class AutorController extends Controller
     }
 
 
-
-
-
-
-
-
     public function decadaautores(Request $request)
     {
         // Obtener el año seleccionado en el formulario
         $year = $request->query('year');
-
         // Inicializar lista de autores vacía
         $autores = [];
         $title = "Selecciona una década para ver los autores";
-
         // Validar si el año es correcto
         if ($year && is_numeric($year)) {
             $title = "Autores nacidos entre $year y " . ($year + 9);
-
             // Verificar si la columna birthdate es de tipo DATE o STRING
             $autores = DB::table('autores')
                 ->whereYear('birthdate', '>=', $year)
                 ->whereYear('birthdate', '<=', $year + 9)
                 ->get();
         }
-
         // Mostrar mensaje si la consulta no trae resultados
         if (empty($autores) || count($autores) == 0) {
             $message = "<p style='color: red;'>No hay autores en esta década.</p>";
@@ -117,10 +110,8 @@ class AutorController extends Controller
             }
             $message .= "</ul>";
         }
-
         // Generar el formulario con el select de décadas y los resultados como una cadena HTML
         $html = "<h1>$title</h1>";
-
         $html .= '<form action="' . route('decadaautores') . '" method="GET">';
         $html .= '<label for="year">Selecciona una década:</label>';
         $html .= '<select name="year" id="year">';
@@ -130,14 +121,12 @@ class AutorController extends Controller
             $selected = ($year == $i) ? 'selected' : '';
             $html .= "<option value=\"$i\" $selected>$i - " . ($i + 9) . "</option>";
         }
-
         $html .= '</select>';
         $html .= '<button type="submit">Buscar</button>';
         $html .= '</form>';
 
         // Agregar resultados
         $html .= $message;
-
         // Retornar la vista con el contenido HTML generado
         return $html;
     }
