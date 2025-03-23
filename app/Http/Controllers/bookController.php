@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class bookController extends Controller
 {
@@ -14,8 +15,21 @@ class bookController extends Controller
      */
     public static function readbooks(): array
     {
-        $books = Storage::json('/public/books.json');
-        return $books;
+      
+            $booksFromJson = Storage::exists('/public/books.json')
+                ? Storage::json('/public/books.json')
+                : [];
+            // dd($booksFromJson);
+     
+            $booksFromDB = DB::table('books')->get()->map(function ($book) {
+                return (array) $book;
+            })->toArray();
+            // dd($booksFromDB);
+            
+            // dd(array_merge($booksFromJson, $booksFromDB));
+            return array_merge($booksFromJson, $booksFromDB);
+        
+    
     }
     /**
      * List book older than input year 
@@ -59,26 +73,26 @@ class bookController extends Controller
     /**
      * Lista TODAS los libros o filtra x año o categoría. 
      */
-    public function listbooks($year = null, $genre = null)
+    public function listbooks($year = null, $gender = null)
     {
         $books_filtered = [];
 
         $title = "Listado de todas los libros";
         $books = bookController::readbooks();
 
-        //if year and genre are null
-        if (is_null($year) && is_null($genre))
+        //if year and gender are null
+        if (is_null($year) && is_null($gender))
             return view('books.list', ["books" => $books, "title" => $title]);
 
-        //list based on year or genre informed
+        //list based on year or gender informed
         foreach ($books as $book) {
-            if ((!is_null($year) && is_null($genre)) && $book['year'] == $year) {
+            if ((!is_null($year) && is_null($gender)) && $book['year'] == $year) {
                 $title = "Listado de todos los libros filtrado x año";
                 $books_filtered[] = $book;
-            } else if ((is_null($year) && !is_null($genre)) && strtolower($book['genre']) == strtolower($genre)) {
+            } else if ((is_null($year) && !is_null($gender)) && strtolower($book['gender']) == strtolower($gender)) {
                 $title = "Listado de todos los libros filtrado x categoria";
                 $books_filtered[] = $book;
-            } else if (!is_null($year) && !is_null($genre) && strtolower($book['genre']) == strtolower($genre) && $book['year'] == $year) {
+            } else if (!is_null($year) && !is_null($gender) && strtolower($book['gender']) == strtolower($gender) && $book['year'] == $year) {
                 $title = "Listado de todos los libros filtrado x categoria y año";
                 $books_filtered[] = $book;
             }
@@ -95,7 +109,7 @@ class bookController extends Controller
 
         if (is_null($year))
             return view('books.list', ["books" => $books, "title" => $title]);
-        //list based on year or genre informed
+        //list based on year or gender informed
         foreach ($books as $book) {
             if (!is_null($year) && $book['year'] == $year) {
                 $title = "Listado de todos los libros filtrado x año";
@@ -106,20 +120,20 @@ class bookController extends Controller
         return view("books.list", ["books" => $books_filtered, "title" => $title]);
     }
 
-    public function listByGenre($genre = null)
+    public function listByGender($gender = null)
     {
         $books_filtered = [];
 
         $title = "Listado de todas los libros";
         $books = bookController::readbooks();
 
-        //if year and genre are null
-        if (is_null($genre))
+        //if year and gender are null
+        if (is_null($gender))
             return view('books.list', ["books" => $books, "title" => $title]);
 
-        //list based on year or genre informed 
+        //list based on year or gender informed 
         foreach ($books as $book) {
-            if ((!is_null($genre)) && strtolower($book['genre']) == strtolower($genre)) {
+            if ((!is_null($gender)) && strtolower($book['gender']) == strtolower($gender)) {
                 $title = "Listado de todos los libros filtrado x categoria";
                 $books_filtered[] = $book;
             }
@@ -144,7 +158,7 @@ class bookController extends Controller
     public function countbooks()
     {
 
-        $title = "Number of movies";
+        $title = "Number of boooks";
         $books = bookController::readbooks();
 
         $books = count($books);
@@ -204,12 +218,13 @@ class bookController extends Controller
 
     private function addbook(Request $request)
     {
-        $books = $this->getbooksFromJson();
+
+        $books = $this->getbooksFromJson(); 
 
         $newbook = [
             'name' => $request->input('name'),
             'year' => $request->input('year'),
-            'genre' => $request->input('genre'),
+            'gender' => $request->input('gender'),
             'author' => $request->input('author'),
             'pages' => $request->input('pages'),
             'img_url' => $request->input('url_image'), // renaming 'url_image' to 'img_url'
@@ -220,23 +235,23 @@ class bookController extends Controller
 
     }
 
-    public function listFilteredbooks($year = null, $genre = null)
+    public function listFilteredbooks($year = null, $gender = null)
 {
     $books_filtered = [];
     $title = "Listado de todos los libros:";
     $books = $this->getbooksFromJson();
 
-    // If both year and genre are null, return all books
-    if (is_null($year) && is_null($genre)) {
+    // If both year and gender are null, return all books
+    if (is_null($year) && is_null($gender)) {
         return view("books.list", ["books" => $books, "title" => $title]);
     }
 
-    // Filter books based on year or genre
+    // Filter books based on year or gender
     foreach ($books as $book) {
         $yearMatches = is_null($year) || $book['year'] == $year;
-        $genreMatches = is_null($genre) || strtolower($book['genre']) == strtolower($genre);
+        $genderMatches = is_null($gender) || strtolower($book['gender']) == strtolower($gender);
 
-        if ($yearMatches && $genreMatches) {
+        if ($yearMatches && $genderMatches) {
             $books_filtered[] = $book;
         }
     }

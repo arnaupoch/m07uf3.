@@ -2,7 +2,7 @@
     {
         "name": "Tres enigmas para la Organizaci\u00f3n",
         "year": 2024,
-        "genre": "Novela",
+        "gender": "Novela",
         "author": "EDUARDO MENDOZA",
         "pages": 408,
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -10,7 +10,7 @@
     {
         "name": "VIGILANCIA PERMANENTE",
         "year": 2019,
-        "genre": "Politica",
+        "gender": "Politica",
         "author": "EDWARD SNOWDEN",
         "pages": 448,
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -18,7 +18,7 @@
     {
         "name": "TEO EN EL DIA DEL LIBRO",
         "year": 2013,
-        "genre": "Infantil",
+        "gender": "Infantil",
         "author": "Violeta Denou",
         "pages": 32,
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -26,7 +26,7 @@
     {
         "name": "marc",
         "year": "123",
-        "genre": "sfsdf",
+        "gender": "sfsdf",
         "author": "sda",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -34,7 +34,7 @@
     {
         "name": "HOLA",
         "year": "123",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGFF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -42,7 +42,7 @@
     {
         "name": "ffff",
         "year": "123",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGFF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -50,7 +50,7 @@
     {
         "name": "fff",
         "year": "2023",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -58,7 +58,7 @@
     {
         "name": "fffeee",
         "year": "2021",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -66,7 +66,7 @@
     {
         "name": "fffeeew",
         "year": "20212",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -74,7 +74,7 @@
     {
         "name": "fffeeeq",
         "year": "20212",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -82,7 +82,7 @@
     {
         "name": "fffeeec",
         "year": "20212",
-        "genre": "RRGRF\u00b4BM",
+        "gender": "RRGRF\u00b4BM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -90,7 +90,7 @@
     {
         "name": "fffeec",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -98,7 +98,7 @@
     {
         "name": "fffewww",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -106,7 +106,7 @@
     {
         "name": "fffewwe",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -114,7 +114,7 @@
     {
         "name": "fffettt",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -122,7 +122,7 @@
     {
         "name": "fffttttt",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -130,7 +130,7 @@
     {
         "name": "fffpppp",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -138,7 +138,7 @@
     {
         "name": "fffwww",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -146,7 +146,7 @@
     {
         "name": "fffqqqqq",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -154,7 +154,7 @@
     {
         "name": "fffgggg",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -162,7 +162,7 @@
     {
         "name": "fffmmmm",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -170,7 +170,7 @@
     {
         "name": "fffmmee",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -178,7 +178,7 @@
     {
         "name": "fffmmeet",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -186,7 +186,7 @@
     {
         "name": "fffmmeete",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -194,7 +194,7 @@
     {
         "name": "fffmmeete6",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -202,7 +202,7 @@
     {
         "name": "fffmmeete67",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -210,7 +210,7 @@
     {
         "name": "fffmmeete67555",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -218,7 +218,7 @@
     {
         "name": "fffmmeete67555ttt",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -226,7 +226,7 @@
     {
         "name": "fffmmeete67777",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -234,7 +234,7 @@
     {
         "name": "fffmmeete677778",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -242,7 +242,7 @@
     {
         "name": "fffmmeete67779",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -250,7 +250,7 @@
     {
         "name": "fffmmeete555",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -258,7 +258,7 @@
     {
         "name": "fffmmeete444",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
@@ -266,7 +266,47 @@
     {
         "name": "hoila",
         "year": "20212",
-        "genre": "RRGRFM",
+        "gender": "RRGRFM",
+        "author": "GGF",
+        "pages": "23",
+        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+    },
+    {
+        "name": "hola",
+        "year": "20212",
+        "gender": "RRGRFM",
+        "author": "GGF",
+        "pages": "23",
+        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+    },
+    {
+        "name": "holafdfdf",
+        "year": "20212",
+        "gender": "RRGRFMfffgggg",
+        "author": "GGF",
+        "pages": "23",
+        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+    },
+    {
+        "name": "arnau Poch Ruizffff",
+        "year": "34343",
+        "gender": null,
+        "author": "GGF",
+        "pages": "23",
+        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+    },
+    {
+        "name": "arnau Poch Ruizffffffffdddd",
+        "year": "34343",
+        "gender": null,
+        "author": "GGF",
+        "pages": "23",
+        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+    },
+    {
+        "name": "wwwwtt",
+        "year": "197",
+        "gender": null,
         "author": "GGF",
         "pages": "23",
         "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"

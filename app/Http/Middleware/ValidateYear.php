@@ -5,6 +5,11 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+
 class ValidateYear
 {
     /**
@@ -18,12 +23,11 @@ class ValidateYear
     {
         $year = $request->route('year');
 
-        // in case year is not numeric go to homepage
-        if(isset($year)){
-            if(is_null($year) || !is_numeric($year)){
-                  return redirect('/');
-            }
+        // Verifica que el parámetro "year" sea numérico solo si está presente
+        if (!is_null($year) && !is_numeric($year)) {
+            return redirect('/');
         }
-        return $next($request);        
+
+        return $next($request);
     }
 }

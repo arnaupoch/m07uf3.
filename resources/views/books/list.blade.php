@@ -20,7 +20,7 @@
         <tr>
             <td>{{$book['name']}}</td>
             <td>{{$book['year']}}</td>
-            <td>{{$book['genre']}}</td>
+            <td>{{$book['gender']}}</td>
             <td>{{$book['author']}}</td>
             <td>{{$book['pages']}}</td>
             <td><img src={{$book['img_url']}} style="width: 100px; height: 120px;" /></td>

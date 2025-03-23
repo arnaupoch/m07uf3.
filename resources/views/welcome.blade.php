@@ -27,12 +27,21 @@
 
     <h2 align="center">Lista de libros</h2  >
     <div class="flex justify-center items-center">
-    <ul class="list-disc pl-4">
-        <li><a href="/bookout/oldbooks" class="text-blue-500">Libros antiguas</a></li>
-        <li><a href="/bookout/newbooks" class="text-blue-500">libros nuevas</a></li>
-        <li><a href="/bookout/allbooks" class="text-blue-500">libros</a></li>
-    </ul>
-</div>
+        <ul class="list-disc pl-4">
+            <li><a href="/bookout/oldbooks" class="text-blue-500">Libros antiguas</a></li>
+            <li><a href="/bookout/newbooks" class="text-blue-500">libros nuevas</a></li>
+            <li><a href="/bookout/allbooks" class="text-blue-500">libros</a></li>
+        </ul>
+    </div>
+
+    <h2 align="center">Lista de autores</h2  >
+    <div class="flex justify-center items-center">
+        <ul class="list-disc pl-4">
+            <li><a href="/bookout/deliteautores" class="text-blue-500">delite autores</a></li>
+            <li><a href="/bookout/decadaautores" class="text-blue-500">lista autores por decada</a></li> 
+            <li><a href="/bookout/listautores" class="text-blue-500">all autores</a></li>
+        </ul>
+    </div>
 
 
 
