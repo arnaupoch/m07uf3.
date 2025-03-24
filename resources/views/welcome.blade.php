@@ -40,6 +40,7 @@
             <li><a href="/bookout/deliteautores" class="text-blue-500">delite autores</a></li>
             <li><a href="/bookout/decadaautores" class="text-blue-500">lista autores por decada</a></li> 
             <li><a href="/bookout/listautores" class="text-blue-500">all autores</a></li>
+            <li><a href="/bookout/countautores" class="text-blue-500">contador de autores</a></li>
         </ul>
     </div>
 
