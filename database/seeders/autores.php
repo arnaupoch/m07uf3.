@@ -18,7 +18,7 @@ class autores extends Seeder
         $faker = Faker::create();
 
         for ($i = 0; $i < 10; $i++) {
-            DB::table('autores')->insert([
+            DB::table('autors')->insert([
                 'name' => $faker->firstName(),
                 'surname' => $faker->lastName(),
                 'birthdate' => $faker->date('Y-m-d', '2000-01-01'),
