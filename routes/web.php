@@ -33,7 +33,7 @@ Route::middleware('year')->group(function () {
         Route::get('allbooks', [bookController::class, "listbooks"])->name('listbooks');
         // autor y autores
         Route::get('countautores', [AutorController::class, "countautores"])->name('countautores');
-        Route::get('listautores', [AutorController::class, "listautores"])->name('listautors');
+        Route::get('listautores', [AutorController::class, "listautores"])->name('listautores');
         Route::get('deliteautores', [AutorController::class, "deliteautores"])->name('deliteautores');
         Route::get('decadaautores', [AutorController::class, "decadaautores"])->name('decadaautores');
         Route::get('destroy', [AutorController::class, "destroy"])->name('destroyAutor');
