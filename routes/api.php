@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AutorController;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\Api\AutorController;
+use App\Http\Controllers\Api\BookController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/books', [BookController::class, 'index']);
+Route::get('/actors', [AutorController::class, 'index']);
