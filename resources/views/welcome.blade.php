@@ -52,7 +52,7 @@
         <input type="text" id="name" name="name" required class="border mb-2"></label>
 
         <label for="year" class="block" align="center">Year:
-        <input type="number" id="year" name="year" required class="border mb-2"></label>
+        <input type="date" id="year" name="year" required class="border mb-2"></label>
 
         <label for="genre" class="block" align="center">Genre:
         <input type="text" id="genre" name="genre" required class="border mb-2"></label>
