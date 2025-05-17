@@ -3,10 +3,12 @@
 // app/http/controllers/bookController.php
 
 namespace App\Http\Controllers;
-
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Book;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Collection;
 
 class bookController extends Controller
 {
@@ -28,48 +30,50 @@ class bookController extends Controller
         // Mezcla ambos orígenes
         return array_merge($booksFromJson, $booksFromDB);
     }
+    public function listOldbooks($year = 2000): Factory|View
+{
+    $books = Book::where('year', '<', $year)->get()->toArray(); // Convertimos a array
 
-    public function listOldbooks($year = 2000)
-    {
-        $books = Book::where('year', '<', $year)->get();
+    return view('books.list', [
+        'title' => "Listado de libros antiguos (Antes de $year)",
+        'books' => $books
+    ]);
+}
 
+public function listNewbooks($year = 2000): Factory|View
+{
+    $books = Book::where('year', '>=', $year)->get()->toArray(); // Convertimos a array
+
+    return view('books.list', [
+        'title' => "Listado de libros nuevos (Después de $year)",
+        'books' => $books
+    ]);
+}
+
+public function listbooks($year = null, $gender = null): Factory|View
+{
+    $title = "Listado de todos los libros";
+    $books = bookController::readbooks(); // Esto ya devuelve array
+
+    if (is_null($year) && is_null($gender)) {
         return view('books.list', [
-            'title' => "Listado de libros antiguos (Antes de $year)",
-            'films' => $books
+            "books" => $books,
+            "title" => $title
         ]);
     }
 
-    public function listNewbooks($year = 2000)
-    {
-        $books = Book::where('year', '>=', $year)->get();
+    // Filtramos manualmente
+    $books_filtered = array_filter($books, function ($book) use ($year, $gender) {
+        $yearMatch = is_null($year) || $book['year'] == $year;
+        $genderMatch = is_null($gender) || strtolower($book['gender']) == strtolower($gender);
+        return $yearMatch && $genderMatch;
+    });
 
-        return view('books.list', [
-            'title' => "Listado de libros nuevos (Después de $year)",
-            'films' => $books
-        ]);
-    }
-
-    public function listbooks($year = null, $gender = null)
-    {
-        $books_filtered = [];
-        $title = "Listado de todos los libros";
-        $books = bookController::readbooks();
-
-        if (is_null($year) && is_null($gender)) {
-            return view('books.list', ["books" => $books, "title" => $title]);
-        }
-
-        foreach ($books as $book) {
-            $yearMatch = is_null($year) || $book['year'] == $year;
-            $genderMatch = is_null($gender) || strtolower($book['gender']) == strtolower($gender);
-
-            if ($yearMatch && $genderMatch) {
-                $books_filtered[] = $book;
-            }
-        }
-
-        return view("books.list", ["books" => $books_filtered, "title" => $title]);
-    }
+    return view("books.list", [
+        "books" => array_values($books_filtered), // reindexamos
+        "title" => $title
+    ]);
+}
 
     public function listByYear($year)
     {

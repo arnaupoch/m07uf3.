@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 
 
-class autores extends Seeder
+class autors extends Seeder
 {
     /**
      * Run the database seeds.

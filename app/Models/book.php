@@ -13,7 +13,7 @@ class Book extends Model
 
 public function Autores()
     {
-        return $this->belongsToMany(Autor::class, 'films_actors');
+        return $this->belongsToMany(Autor::class, 'books_autores');
     }
 }
 ?>
